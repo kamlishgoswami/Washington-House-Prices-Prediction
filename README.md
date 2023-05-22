@@ -7,7 +7,7 @@ Data Science Project
 
 •	Downloaded real estate property dataset from Kaggle for Washington, USA.
 
-•	Performed data preprocessing, including handling missing values, encoding categorical variables, and scaling numerical features.
+•	Performed data preprocessing, including handling missing values, outliers, and encoding categorical variables 
 
 •	Conducted feature engineering to create new meaningful features.
 
