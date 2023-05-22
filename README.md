@@ -3,7 +3,7 @@ Data Science Project
 
 # Data-Science-Portfolio
 
-# Project 1: Washignton House Prices Prediction
+# Project Overview: 
 
 •	Downloaded real estate property dataset from Kaggle for Washington, USA.
 
@@ -28,4 +28,5 @@ Technologies Used: Python, Numpy, Pandas Matplotlib, Seaborn, Sklearn, FastAPI, 
 [AWS Link](http://ec2-54-242-12-7.compute-1.amazonaws.com/)
 
 ![Website](Washigton%20House%20Prices%20Prediction.png)
+
 
