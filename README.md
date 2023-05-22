@@ -23,7 +23,7 @@ Data Science Project
 
 •	Deployed the model, API, and website to AWS for accessibility and scalability.
 
-Technologies Used: Python, Numpy, Pandas Matplotlib, Seaborn, Sklearn, FastAPI, AWS, HTML,CSS,Bootstrap and JavaScript. 
+Technologies Used: Python, Numpy, Pandas Matplotlib, Seaborn, scikit-learn, FastAPI, AWS, HTML,CSS,Bootstrap and JavaScript. 
 
 [AWS Link](http://ec2-54-242-12-7.compute-1.amazonaws.com/)
 
