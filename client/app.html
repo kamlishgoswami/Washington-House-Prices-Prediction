@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Washington House Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* opacity: 0.5; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="background-color: #425273; padding: 45px; margin: 20px; border-radius: 10px;">
+                <h1 class="h1 text-center text-white">Washington House Price Prediction</h1>
+                <hr>
+                <form class="row g-3" method="post">
+                    <input type="number" id="sqft_living" placeholder="Square Feet Living" class="form-control mb-2" required>
+                    <input type="number" id="sqft_lot" placeholder="Square Feet Lot" class="form-control mb-2" required>
+                    <div class="text-white inline">
+                        <h5>Location</h5>
+                        <select id="uilocations" name='uilocations' class="form-control">
+                            <option disabled="disabled" value="Select Location">Select Location</option>
+                            <option value="Select Location">New York</option>
+                        </select>
+                    </div>
+                    <div class="text-white inline">
+                        <h5>Condition</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="excellent" value="1" name="uicondition">
+                            <label class="form-check-label">Excellent</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input"  type="radio" id="average" value="2" name="uicondition">
+                            <label class="form-check-label">Average</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="poor" value="3" name="uicondition">
+                            <label class="form-check-label">Poor</label>
+                        </div>
+                    </div>
+                    <div class="text-white inline">
+                        <h5>Floor</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="floor1" type="radio"  value="1" name="uifloor">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="floor2" type="radio" value="2" name="uifloor">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="floor3" type="radio" value="3" name="uifloor">
+                            <label class="form-check-label">3</label>
+                        </div>
+                    </div>
+                    <div class="text-white inline">
+                        <h5>Bedroom</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom1" type="radio" value="1" name="uibedroom">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom2" type="radio"  value="2" name="uibedroom">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom3" type="radio"  value="3" name="uibedroom">
+                            <label class="form-check-label">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom4" type="radio"  value="4" name="uibedroom">
+                            <label class="form-check-label">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom5" type="radio" value="5" name="uibedroom">
+                            <label class="form-check-label">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bedroom6" type="radio" value="6" name="uibedroom">
+                            <label class="form-check-label">6</label>
+                        </div>
+                    </div>
+                    <div class="text-white inline">
+                        <h5>Bathroom</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom1" type="radio" value="1" name="uibathroom">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom2"  type="radio"  value="2" name="uibathroom">
+                            <label class="form-check-label">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom3"  type="radio" value="3" name="uibathroom">
+                            <label class="form-check-label">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom4"  type="radio" value="4" name="uibathroom">
+                            <label class="form-check-label">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom5"  type="radio"  value="5" name="uibathroom">
+                            <label class="form-check-label">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="bathroom6"  type="radio"  value="6" name="uibathroom">
+                            <label class="form-check-label">6</label>
+                        </div>
+                    </div>
+                    <div class="text-white inline">
+                        <h5>Waterfront</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="waterfront1" type="radio" value="1" name="uiwaterfront">
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="waterfront2" type="radio" value="0" name="uiwaterfront">
+                            <label class="form-check-label">No</label>
+                        </div>
+                    </div>
+                    <div class="submit d-grid gap-2">
+                        <button onclick="onClickEstimatedPrice()" class="submit btn btn-primary d-block" type="button">Estimate Price</button>
+                        <div id="uiEstimatedPrice" class="result text-white mt-3" style="text-align:center" ></div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
